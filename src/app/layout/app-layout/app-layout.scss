@@ -1,0 +1,46 @@
+.summary {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+  border-radius: 20px;
+  border: 0px solid #cbd5e1;
+}
+
+.summary-card {
+  flex: 1;
+}
+
+.span {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid #cbd5e1;
+  border-radius: 20px;
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+
+.strong {
+  display: block;
+  margin-top: 20px;
+  color: #1e293b;
+  font-size: 32px;
+  border: 0px solid #cbd5e1;
+  align-items: center;
+}
+
+.interview-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+   border: 1px solid #2b4c80;
+   align-items: center;
+}
+.interview-table th,
+.interview-table td {
+  padding: 12px;
+  border: 1px solid #2b4c80;
+}
+
+.interview-table th {
+  background-color: #e8f0fe;
+}

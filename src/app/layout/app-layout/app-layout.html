@@ -1,1 +1,39 @@
-<p>app-layout works!</p>
+<div class="summary">
+    <div class="summary-card">
+        <span>Scheduled</span>
+        <strong class="strong">{{completedCount}}</strong>
+    </div>
+    <div class="summary-card">
+        <span>Completed</span>
+        <strong class="strong">{{scheduledCount}}</strong>
+    </div>
+    <div class="summary-card">
+        <span>Need FeedBack</span>
+        <strong class="strong">{{feedbackCount}}</strong>
+    </div>
+</div>
+
+<div>
+    <h2>Upcoming Interviews</h2>
+    <table class="interview-table">
+        <thead>
+            <tr>
+                <th>Candidate</th>
+                <th>Role</th>
+                <th>Date and time</th>
+                <th>Interviewer</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @for (interview of interviews; track interview.id) {
+            <tr>
+                <td>{{ interview.candidateName }}</td>
+                <td>{{ interview.role }}</td>
+                <td>{{ interview.scheduledAt }}</td>
+                <td>{{ interview.interviewer }}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
