@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './header.scss',
 })
 export class Header {
-  interview = "Interview Portal System";
+  interview = "Interview Portal System:Schedule, track, and manage candidate interviews.";
 
 }
