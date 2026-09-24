@@ -1,0 +1,30 @@
+.app-layout {
+  min-height: 100vh;
+  border: 2px solid black; // outer boundary
+}
+
+.middle-section {
+  display: flex;
+  min-height: 80vh;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+app-header,
+app-footer {
+  display: block;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+app-sidebar {
+  display: block;
+  width: 220px;
+  padding: 20px;
+  border-right: 1px solid black;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
