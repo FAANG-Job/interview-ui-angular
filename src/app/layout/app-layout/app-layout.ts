@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 export type InterviewStatus = 'Scheduled' | 'Completed' | 'Cancelled';
+import { Router, RouterOutlet } from '@angular/router';
 
 export interface Interview {
   id: number;
@@ -13,13 +14,15 @@ export interface Interview {
 
 @Component({
   selector: 'app-app-layout',
-  imports: [],
+  imports: [RouterOutlet ],
   templateUrl: './app-layout.html',
   styleUrl: './app-layout.scss',
 })
 
 
 export class AppLayout {
+  constructor(private router: Router) {}
+
 
   interviews: Interview[] = [
     {
@@ -39,7 +42,7 @@ export class AppLayout {
       interviewer: "Garv Aggarwal"
     },
     {
-      id: 200,
+      id: 300,
       candidateName: "Rajesh",
       status: "Scheduled",
       scheduledAt: new Date('2026-09-24T10:00:00'),
@@ -57,5 +60,9 @@ export class AppLayout {
 
   get feedbackCount(): number {
     return 1;
+  }
+
+  scheduleInterview() {
+    this.router.navigate(['/schedule-interview']);
   }
 }
