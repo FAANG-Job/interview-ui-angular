@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 import { InterviewList } from './features/interview-list/interview-list';
 import { AppLayout } from './layout/app-layout/app-layout';
-import { ScheduleInterview } from './features/schedule-interview/schedule-interview';
+import { scheduleInterview } from './features/schedule-interview/schedule-interview';
+
 
 export const routes: Routes = [
     {
@@ -14,7 +15,7 @@ export const routes: Routes = [
     },
     {
         path: 'schedule-interview',
-        component: ScheduleInterview,
+        component: scheduleInterview,
     },
     {
         path: '',

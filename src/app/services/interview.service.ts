@@ -5,6 +5,8 @@ import { Interview } from "../models/interview";
     providedIn: 'root',
 })
 export class InterviewService {
+    private readonly instanceId = Math.random().toString(36).slice(2, 8);
+
     private interviews = signal<Interview[]>([
         {
             id: 100,
@@ -32,12 +34,26 @@ export class InterviewService {
         }
 
     ]);
+    constructor() {
+        console.log('InterviewService CREATED:', this.instanceId);
+    }
 
     getInterviews(): Interview[] {
         return this.interviews();
     }
 
-
+    addInterview(interview: Interview): void {
+         alert(this.interviews().length);
+        this.interviews.update(currentInterviews => [
+            ...currentInterviews,
+            interview,
+        ]);
+        console.log(
+            'After add:',
+            this.interviews().length
+        );
+       
+    }
 
 }
 
