@@ -1,1 +1,35 @@
-<p>schedule-interview works!</p>
+<section class="schedule-container">
+  <h1>Schedule Interview</h1>
+  <p>Enter the interview details below.</p>
+
+  <form>
+    <div class="form-group">
+      <label for="candidateName">Candidate Name</label>
+      <input #candidateName id="candidateName" type="text" placeholder="Enter candidate name" />
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role</label>
+      <input #role id="role" type="text" placeholder="Example: Java Backend Developer" />
+    </div>
+
+    <div class="form-group">
+      <label for="interviewer">Interviewer</label>
+      <input #interviewer id="interviewer" type="text" placeholder="Enter interviewer name" />
+    </div>
+
+    <div class="form-group">
+      <label for="scheduledAt">Interview Date and Time</label>
+      <input #scheduledAt id="scheduledAt" type="datetime-local" />
+    </div>
+
+    <button type="button" (click)="addNewInterview(
+      candidateName.value,
+      role.value,
+      interviewer.value,
+      scheduledAt.value)">
+      Schedule Interview
+    </button>
+    <button type="button">Cancel</button>
+  </form>
+</section>

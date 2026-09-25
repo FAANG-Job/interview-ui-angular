@@ -1,1 +1,33 @@
-<p>interview-list works!</p>
+<div class="page-header">
+  <h1>All Interviews</h1>
+</div>
+
+<table class="interview-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Candidate</th>
+      <th>Role</th>
+      <th>Interviewer</th>
+      <th>Scheduled At</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (interview of interviews; track interview.id) {
+      <tr>
+        <td>{{ interview.id }}</td>
+        <td>{{ interview.candidateName }}</td>
+        <td>{{ interview.role }}</td>
+        <td>{{ interview.interviewer }}</td>
+        <td>{{ interview.scheduledAt }}</td>
+        <td>{{ interview.status }}</td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="6">No interviews scheduled yet.</td>
+      </tr>
+    }
+  </tbody>
+</table>
